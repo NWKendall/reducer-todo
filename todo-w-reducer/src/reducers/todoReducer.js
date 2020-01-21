@@ -1,3 +1,4 @@
+
 export const initialState = {
   item: 'Learn about reducers',
   completed: false,
@@ -5,5 +6,18 @@ export const initialState = {
 }
 
 export const todoReducer = (state, action) => {
-  
+  switch(action.type) {
+    case "ADD_TODO":
+      return {
+      }
+    case "TOGGLE_TODO":
+      return {
+        
+      }
+    case "CLEAR_TODO":
+      return {
+      }
+    default:
+      return state
+  }
 }

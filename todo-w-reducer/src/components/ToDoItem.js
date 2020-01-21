@@ -1,9 +1,13 @@
 import React from "react";
 
-const ToDoItem = () => {
+const ToDoItem = ({ todo }) => {
+
+  const { item, completed, id } = todo
+
   return (
-    <div>
-      <p>ToDoItem</p>
+    <div style={{border: "1px solid black"}}>
+      <p>{item}</p>
+      <button>complete</button>
     </div>
   )
 }

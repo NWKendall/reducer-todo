@@ -1,9 +1,14 @@
-import React from "react";
-import ToDoList from "./ToDoList"
+import React, { useState, useReducer } from "react";
+import ToDoForm from "./ToDoForm";
+import ToDoList from "./ToDoList";
+
 
 const ToDoApp = () => {
   return (
-    <ToDoList />
+    <div>
+      <ToDoForm />
+      <ToDoList />    
+    </div>
   )
 }
 

@@ -3,17 +3,17 @@ import ToDoItem from "./ToDoItem";
 import { todoReducer, initialState } from "../reducers/todoReducer";
 
 const ToDoList = () => {
-  const [todoState, dispatch] = useReducer(todoReducer, initialState);
+  const [state, dispatch] = useReducer(todoReducer, initialState);
   return (
     <div>
       <h2>TodoList</h2>
-      {todoState.map(todo => {
-        <ToDoItem 
-          key={todo.id}
-          todo={todo}
-        />
-
-      })}
+        {state.map(todo => (
+          <ToDoItem 
+            key={todo.id}
+            todo={todo}
+            dispatch={dispatch}
+          />
+        ))}
     </div>
   )
 }

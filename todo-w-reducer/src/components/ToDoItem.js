@@ -1,15 +1,14 @@
 import React from "react";
-import { todoReducer, initialState } from "../reducers/todoReducer";
 
-const ToDoItem = ({ todo, dispatch }) => {
-
+const ToDoItem = ({ todo, toggleTodo }) => {
+  console.log(toggleTodo)
   const { item, completed, id } = todo
-  const { dispatch } = dispatch
+  
 
   return (
     <div style={{border: "1px solid black"}}>
       <p>{item}</p>
-      <button onClick={""}>complete</button>
+      <button onClick={() => toggleTodo(id)}>Complete</button>
     </div>
   )
 }

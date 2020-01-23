@@ -35,7 +35,7 @@ const ToDoList = () => {
         addToDo={addToDo}
         clearToDo={clearToDo}
       />
-        {state.map(todo => (
+        {state.todos.map(todo => (
           <ToDoItem 
             key={todo.id}
             todo={todo}

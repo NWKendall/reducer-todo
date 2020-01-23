@@ -1,20 +1,27 @@
 
-export const initialState = [{
+export const initialState = {
+  todos: [
+    {
     item: 'Learn about reducers',
     completed: false,
     id: Date.now()
   }]
+}
 
 export const todoReducer = (state, action) => {
   switch(action.type) {
     case "ADD_TODO":
       console.log(`add todo`, action.payload)
        
-      return [...state, {
+      return {...state, 
+        todos: [
+          ...state.todos,
+          {
         item: action.payload,
         completed: false,
         id: Date.now()
-      }]
+          }
+        ]}
 
     case "TOGGLE_TODO": // toggle completed map with ID
     console.log(`toggle todo`, state)  
